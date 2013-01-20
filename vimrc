@@ -1,3 +1,6 @@
+" Initialize Vundle and load plugins.
+" Yes, this file is loading all the plugins,
+" so show it some respect
 source ~/.vim/vundle.vim
 
 " Automatically detect file types. (must turn on after Vundle)
