@@ -38,21 +38,17 @@ set incsearch            "Find the next match as we type the search
 set ignorecase smartcase "Ignore case, unless capitals are used
 set viminfo='100,f1      "Save up to 100 marks, enable capital marks
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Swap Files
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set backupdir=$HOME/.vim/backups
-set directory=$HOME/.vim/backups
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Persistent Undo
+" DIRECTORIES
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Keep undo history across sessions, by storing in file.
-" Only works all the time.
 
-set undodir=~/.vim/backups
+set backupdir=~/.vim/backups//,.  " for backups
+
 set undofile
+set undodir=~/.vim/undos//,.      " for undos
+
+set directory=~/.vim/swaps//,.    " for swaps
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indentation & Formatting
