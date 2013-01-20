@@ -37,13 +37,11 @@ set directory=~/.vim/swaps//,.    " for swaps
 " Formatting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" set autoindent
-" set smartindent
-" set smarttab
-" set expandtab
-" set shiftwidth=2
-" set softtabstop=2
-" set tabstop=2
+set smartindent
+set smarttab
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
