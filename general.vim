@@ -2,39 +2,28 @@
 " GENERAL CONFIG
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set number                      "Line numbers are good
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
-set autoread                    "Reload files changed outside vim
-set iskeyword+=-                "Include hyphens in words 
-
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window.
-" http://items.sjbach.com/319/configuring-vim-right
-set hidden
-
-"turn on syntax highlighting
-syntax on
-
-" Remove delay when escaping
-set ttimeoutlen=100
-
-color desert
+set number                      " Line numbers are good
+set history=1000                " Store lots of :cmdline history
+set showcmd                     " Show incomplete cmds down the bottom
+set showmode                    " Show current mode down the bottom
+set autoread                    " Reload files changed outside vim
+set iskeyword+=-,$              " Include some nice characters in words
+set hidden                      " Buffers can exist in the background without being in a window.
+syntax on                       " Activate syntax highlighting
+set ttimeoutlen=100             " Remove delay while escaping
+color desert                    " Sexy theme, activate
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search Settings 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set incsearch            "Find the next match as we type the search
-set ignorecase smartcase "Ignore case, unless capitals are used
-set viminfo='100,f1      "Save up to 100 marks, enable capital marks
+set incsearch              " Find the next match as we type the search
+set ignorecase smartcase   " Ignore case, unless capitals are used
+set viminfo='100,f1        " Save up to 100 marks, enable capital marks
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" DIRECTORIES
+" Directories
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set backupdir=~/.vim/backups//,.  " for backups
@@ -45,19 +34,20 @@ set undodir=~/.vim/undos//,.      " for undos
 set directory=~/.vim/swaps//,.    " for swaps
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Indentation & Formatting
+" Formatting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set autoindent
 set smartindent
 set smarttab
+set expandtab
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
-set expandtab
 
-filetype plugin on
-filetype indent on
+if has("autocmd")
+  filetype plugin indent on
+endif
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
