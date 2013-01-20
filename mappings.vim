@@ -2,6 +2,8 @@
 " MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" ===MISC===
+
 " Set <leader> to comma
 let mapleader = ","
 
@@ -14,32 +16,20 @@ nmap <leader><leader> <C-^>
 " easily set filetype
 nnoremap <leader>f :set filetype=
 
-" Edit .vimrc easily
-nmap <leader>ve :tabedit $MYVIMRC<CR>
-
-" Source .vimrc easily
-nmap <leader>vs :source $MYVIMRC<CR>
-
-" Alphabetize stuff
-nmap <leader>s vii:!sort<CR>
-xmap <leader>s :!sort<CR>
-
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" toggle search highlighting and report status with <F4>
-noremap <F4> :set hlsearch! hlsearch?<CR>
-
-" auto-indent pastes
-nnoremap p p=`]
-
-" Y acts like it should
+" Y yanks from current cursor position to end of line
 nnoremap Y y$
 
-" === Lists ===
+" Alphabetize stuff
+nmap <leader>s vii:!sort<CR>
+xmap <leader>s :!sort<CR>
+
+" ===LISTS===
 
 " browse argument list easily
 nnoremap ]a :next<CR>
