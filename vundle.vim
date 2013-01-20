@@ -18,5 +18,6 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
+Bundle 'matchit.zip'
 Bundle 'HTML5-Syntax-File'
 Bundle 'kien/ctrlp.vim'
