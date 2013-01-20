@@ -1,4 +1,4 @@
-set nocompatible
+source ~/.vim/vundle.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Config
