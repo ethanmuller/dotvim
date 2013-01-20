@@ -1,5 +1,8 @@
 source ~/.vim/vundle.vim
 
+" Automatically detect file types. (must turn on after Vundle)
+filetype plugin indent on
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
