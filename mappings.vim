@@ -54,4 +54,3 @@ nnoremap ]l :lnext<CR>
 nnoremap [l :lprev<CR>
 nnoremap ]L :llast<CR>
 nnoremap [L :lfirst<CR>
-

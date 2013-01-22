@@ -17,3 +17,6 @@ source ~/.vim/mappings.vim
 
 " Any plugin-specific settings go right here
 source ~/.vim/plugin_config.vim
+
+" Any plugin-specific mappings go here
+source ~/.vim/plugin_mappings.vim
