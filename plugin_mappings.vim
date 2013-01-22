@@ -9,3 +9,7 @@ nmap <leader>Gr :Gread<cr>
 nmap <leader>GR :Gremove<cr>
 nmap <leader>Gm :Gmove<cr>
 nmap <leader>Gb :Gblame<cr>
+
+" CSScomb mapings
+nmap <leader>C :CSScomb
+vmap <leader>C :CSScomb
