@@ -7,9 +7,9 @@
 " Set <leader> to comma
 let mapleader = ","
 
-" Remap "," because it's still useful (last backward character search)
-nnoremap \ ,
-vnoremap \ ,
+" ; does :
+nnoremap ; :
+vnoremap ; :
 
 " switch to last-used file
 nnoremap <leader><leader> <C-^>

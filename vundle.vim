@@ -16,10 +16,11 @@ Bundle 'gmarik/vundle'
 " PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'fugitive.vim'
 Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'matchit.zip'
 Bundle 'HTML5-Syntax-File'
-Bundle 'kien/ctrlp.vim'
+Bundle 'vim-coffee-script'
