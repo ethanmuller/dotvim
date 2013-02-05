@@ -23,6 +23,12 @@ nmap <c-k> <c-w>k
 nmap <c-h> <c-w>h
 nmap <c-l> <c-w>l
 
+" Convenient $ and ^
+nmap <c-h> ^
+vmap <c-h> ^
+nmap <c-l> $
+vmap <c-l> $
+
 " Y yanks from current cursor position to end of line
 nmap Y y$
 
