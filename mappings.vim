@@ -33,6 +33,9 @@ nmap Y y$
 nmap Q @@
 vmap Q @@
 
+" Alternate escape
+inoremap jk <Esc>
+
 " ===SHORCUTS===
 
 " easily set filetype
