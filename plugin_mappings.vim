@@ -13,7 +13,3 @@ nmap <leader>Gb :Gblame<cr>
 " CSScomb
 nmap <leader>C :CSScomb
 vmap <leader>C :CSScomb
-
-" vim-coffee-script
-nmap <leader>cm :CoffeeCompile<cr>
-nmap <leader>cw :CoffeeCompile watch vert<cr>:setl scrollbind<cr><c-w><c-w>:setl scrollbind<cr><c-w><c-w>
