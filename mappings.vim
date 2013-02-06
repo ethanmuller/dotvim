@@ -7,10 +7,6 @@ let mapleader = ","
 
 " ===SWAPS===
 
-" ; does :
-nmap ; :
-vmap ; :
-
 " Make ' more useful
 nnoremap ' `
 vnoremap ' `
