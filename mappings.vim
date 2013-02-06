@@ -8,8 +8,8 @@ let mapleader = ","
 " ===SWAPS===
 
 " ; does :
-nnoremap ; :
-vnoremap ; :
+nmap ; :
+vmap ; :
 
 " Make ' more useful
 nnoremap ' `
