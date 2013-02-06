@@ -103,3 +103,8 @@ set statusline+=%=      "left/right separator
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
+
+" ===AUTO COMMANDS===
+
+" automatically resize windows when window is resized
+au VimResized * exe "normal! \<c-w>="
