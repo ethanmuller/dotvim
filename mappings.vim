@@ -28,11 +28,9 @@ nmap <c-l> <c-w>l
 
 " Y yanks from current cursor position to end of line
 nmap Y y$
-vmap Y y$
 
 " Remap Q (annoying Ex mode) to last-used macro
 nmap Q @@
-vmap Q @@
 vmap Q @@
 
 " ===SHORCUTS===
