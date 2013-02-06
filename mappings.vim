@@ -5,7 +5,7 @@
 " Set <leader> to comma
 let mapleader = ","
 
-" ===SWAPS===
+" ===MISC===
 
 " Make ' more useful
 nnoremap ' `
@@ -16,8 +16,6 @@ nmap H ^
 vmap H ^
 nmap L $
 vmap L $
-
-" ===MISC===
 
 " switch to last-used file
 nnoremap <leader><leader> <C-^>
