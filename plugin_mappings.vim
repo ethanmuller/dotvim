@@ -11,3 +11,5 @@ nmap <Leader>gp :Git push<CR>
 nmap <Leader>gu :Git pull<CR>
 nmap <Leader>gd :Gdiff<CR>
 nmap <leader>gl :Glog<cr>
+" Exit a diff by closing the diff window
+nmap <Leader>gx :wincmd h<CR>:q<CR>
