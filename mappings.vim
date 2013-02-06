@@ -33,8 +33,15 @@ nmap Y y$
 nmap Q @@
 vmap Q @@
 
+" ===INTERACTIVE MODE===
 " Alternate escape
 inoremap jk <Esc>
+
+" ===COMMAND MODE===
+cnoremap <C-j> <t_kd>
+cnoremap <C-k> <t_ku>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
 
 " ===SHORCUTS===
 
