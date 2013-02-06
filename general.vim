@@ -87,6 +87,12 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
+" Scroll the viewpoint faster
+nnoremap <C-e> 3<C-e> 
+vnoremap <C-e> 3<C-e> 
+nnoremap <C-y> 3<C-y>
+vnoremap <C-y> 3<C-y>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Statusline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
