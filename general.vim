@@ -93,23 +93,6 @@ vnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 vnoremap <C-y> 3<C-y>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Statusline
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
-
-set statusline=%t       "tail of the filename
-set statusline+=%h      "help file flag
-set statusline+=%m      "modified flag
-set statusline+=%r      "read only flag
-set statusline+=%y      "filetype
-set statusline+=%=      "left/right separator
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
-
 " ===AUTO COMMANDS===
 
 " automatically resize windows when window is resized
