@@ -2,20 +2,29 @@
 " MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" ===MISC===
-
 " Set <leader> to comma
 let mapleader = ","
+
+" ===SWAPS===
 
 " ; does :
 nnoremap ; :
 vnoremap ; :
 
+" Make ' more useful
+nnoremap ' `
+vnoremap ' `
+
+" Convenient $ and ^
+nmap H ^
+vmap H ^
+nmap L $
+vmap L $
+
+" ===MISC===
+
 " switch to last-used file
 nnoremap <leader><leader> <C-^>
-
-" easily set filetype
-nmap <leader>f :set filetype=
 
 " Move around splits with <c-hjkl>
 nmap <c-j> <c-w>j
@@ -23,14 +32,13 @@ nmap <c-k> <c-w>k
 nmap <c-h> <c-w>h
 nmap <c-l> <c-w>l
 
-" Convenient $ and ^
-nmap <c-h> ^
-vmap <c-h> ^
-nmap <c-l> $
-vmap <c-l> $
-
 " Y yanks from current cursor position to end of line
 nmap Y y$
+
+" ===SHORCUTS===
+
+" easily set filetype
+nmap <leader>f :set filetype=
 
 " Alphabetize stuff
 nmap <leader>s vii:!sort<CR>
