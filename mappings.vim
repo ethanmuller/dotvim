@@ -77,3 +77,9 @@ nmap ]l :lnext<CR>
 nmap [l :lprev<CR>
 nmap ]L :llast<CR>
 nmap [L :lfirst<CR>
+
+" ===OPERATOR PENDING===
+
+" css rules
+onoremap <silent> R :<C-U>normal! [{V]}<CR>
+vnoremap <silent> R :<C-U>normal! [{V]}<CR>
