@@ -81,5 +81,5 @@ nmap [L :lfirst<CR>
 " ===OPERATOR PENDING===
 
 " css rules
-onoremap <silent> R :<C-U>normal! [{V]}<CR>
-vnoremap <silent> R :<C-U>normal! [{V]}<CR>
+onoremap <silent> R :<C-U>normal! j[{V]}<CR>
+vnoremap <silent> R :<C-U>normal! j[{V]}<CR>
