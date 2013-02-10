@@ -25,6 +25,8 @@ Bundle 'matchit.zip'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'ack.vim'
+Bundle 'Valloric/MatchTagAlways'
+Bundle 'xolox/vim-session'
 
 Bundle 'HTML5-Syntax-File'
 Bundle 'Markdown'
