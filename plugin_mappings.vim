@@ -13,3 +13,10 @@ nmap <Leader>gd :Gdiff<CR>
 nmap <leader>gl :Glog<cr>
 " Exit a diff by closing the diff window
 nmap <Leader>gx :wincmd h<CR>:q<CR>
+
+" vim-session
+nmap <leader>ss :SaveSession<Space>
+nmap <leader>so :OpenSession<Space>
+
+" Scratch
+nmap <Leader>S :Scratch<CR>
