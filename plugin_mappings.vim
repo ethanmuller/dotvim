@@ -23,3 +23,6 @@ nmap <Leader>S :Scratch<CR>
 
 " CtrlP
 nmap <C-m> :CtrlPMRUFiles<CR>
+
+" figlet
+nmap g@@ g@_
