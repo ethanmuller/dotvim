@@ -20,3 +20,6 @@ nmap <leader>so :OpenSession<Space>
 
 " Scratch
 nmap <Leader>S :Scratch<CR>
+
+" CtrlP
+nmap <C-m> :CtrlPMRUFiles<CR>
