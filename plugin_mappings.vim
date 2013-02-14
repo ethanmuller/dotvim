@@ -19,7 +19,8 @@ nmap <leader>ss :SaveSession<Space>
 nmap <leader>so :OpenSession<Space>
 
 " Scratch
-nmap <Leader>S :Scratch<CR>
+nmap <Leader>SS :Sscratch<CR>
+nmap <Leader>SV :Vscratch<CR>
 
 " CtrlP
 nmap <C-m> :CtrlPMRUFiles<CR>
