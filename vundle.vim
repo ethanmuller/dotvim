@@ -30,6 +30,7 @@ Bundle 'Valloric/MatchTagAlways'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle 'ethanmuller/scratch.vim'
 
 " syntax plugins
 Bundle 'HTML5-Syntax-File'
