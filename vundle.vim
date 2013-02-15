@@ -31,6 +31,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'ethanmuller/scratch.vim'
+Bundle 'Figlet.vim'
 
 " syntax plugins
 Bundle 'HTML5-Syntax-File'
