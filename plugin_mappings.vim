@@ -23,7 +23,9 @@ nmap <Leader>SS :Sscratch<CR>
 nmap <Leader>SV :Vscratch<CR>
 
 " CtrlP
-nmap <C-m> :CtrlPMRUFiles<CR>
+nmap <Leader>t :CtrlP<CR>
+" mneumonic: open MRU
+nmap <Leader>om :CtrlPMRUFiles<CR>
 
 " figlet
 nmap g@@ g@_
