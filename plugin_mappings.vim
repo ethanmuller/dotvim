@@ -29,3 +29,8 @@ nmap <Leader>om :CtrlPMRUFiles<CR>
 
 " figlet
 nmap g@@ g@_
+
+" ===EXTERNAL APPS===
+
+" open current file in Marked
+nmap <Leader>M :!mark "%"<CR>

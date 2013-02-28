@@ -48,10 +48,6 @@ cnoremap <C-e> <End>
 " easily set filetype
 nmap <leader>f :set filetype=
 
-" Alphabetize stuff
-nmap <leader>s vii:!sort<CR>
-xmap <leader>s :!sort<CR>
-
 " ===LISTS===
 
 " browse argument list easily
@@ -83,3 +79,14 @@ nmap [L :lfirst<CR>
 " css rules
 onoremap <silent> R :<C-U>normal! j[{V]}<CR>
 vnoremap <silent> R :<C-U>normal! j[{V]}<CR>
+
+" ===EDITING===
+" Alphabetize stuff
+nmap <leader>s vii:!sort<CR>
+xmap <leader>s :!sort<CR>
+
+" Markdown
+" markdown italic
+vmap <leader>mi S*
+" markdown bold
+vmap <leader>mb S*gvS*
