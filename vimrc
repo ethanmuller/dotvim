@@ -12,7 +12,7 @@ source ~/.vim/general.vim
 " Load functions
 source ~/.vim/functions.vim
 
-" Load handy-dandy mappings
+" Load handy-dandy general vim mappings
 source ~/.vim/mappings.vim
 
 " Any plugin-specific settings go right here
