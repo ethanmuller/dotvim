@@ -23,12 +23,14 @@ nmap <Leader>SS :Sscratch<CR>
 nmap <Leader>SV :Vscratch<CR>
 
 " CtrlP
-nmap <Leader>t :CtrlP<CR>
 " mneumonic: open MRU
 nmap <Leader>om :CtrlPMRUFiles<CR>
 
 " figlet
 nmap g@@ g@_
+
+" tagbar
+nmap <Leader>t :TagbarToggle<CR>
 
 " ===EXTERNAL APPS===
 
