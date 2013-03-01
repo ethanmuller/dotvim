@@ -48,6 +48,11 @@ cnoremap <C-e> <End>
 " easily set filetype
 nmap <leader>f :set filetype=
 
+" edit vimrc
+nmap <leader>ve :e ~/.vimrc<CR>
+" source vimrc
+nmap <leader>vs :so ~/.vimrc<CR>
+
 " ===LISTS===
 
 " browse argument list easily
