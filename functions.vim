@@ -7,6 +7,8 @@ function! WriterMode()
   map k gk
   set wrap
   set linebreak
+  colorscheme morning
+  set background=light
 endfunction
 
 " Indent text object
