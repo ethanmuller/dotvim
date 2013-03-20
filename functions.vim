@@ -2,6 +2,13 @@
 " FUNCTIONS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+function! WriterMode()
+  map j gj
+  map k gk
+  set wrap
+  set linebreak
+endfunction
+
 " Indent text object
 function! s:IndTxtObj(inner)
   let curline = line(".")

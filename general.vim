@@ -13,6 +13,7 @@ syntax on                       " Activate syntax highlighting
 set ttimeoutlen=100             " Remove delay while escaping
 set background=dark             " Dark-colored background
 color solarized                 " Sexy, sexy colors
+set listchars=tab:▸\ ,eol:¬
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search Settings 

@@ -46,7 +46,10 @@ cnoremap <C-e> <End>
 " ===SHORCUTS===
 
 " easily set filetype
-nmap <leader>f :set filetype=
+nmap <leader>ft :set filetype=
+
+" toggle visible characters
+nmap <leader>l :set list!<CR>
 
 " edit vimrc
 nmap <leader>ve :e ~/.vimrc<CR>
@@ -95,3 +98,6 @@ xmap <leader>s :!sort<CR>
 vmap <leader>mi S*
 " markdown bold
 vmap <leader>mb S*gvS*
+
+" ===FUNCTIONS===
+nmap <leader>fw :call WriterMode()<CR>

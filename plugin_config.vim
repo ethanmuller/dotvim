@@ -20,3 +20,10 @@ if has('macunix') || has('mac')
   let g:gist_clip_command = 'pbcopy'
 endif
 let g:gist_post_private = 1
+
+" signify
+"let g:signify_color_guibg = "#ff0000"
+"let g:signify_color_sign_ctermbg = 1
+
+" solarized
+hi SignColumn           guifg=#f6f3e8     guibg=black       gui=NONE    ctermfg=NONE        ctermbg=NONE        cterm=NONE

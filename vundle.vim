@@ -31,7 +31,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'ethanmuller/scratch.vim'
 Bundle 'Figlet.vim'
-Bundle 'Tagbar'
+Bundle 'mhinz/vim-signify'
 
 " syntax plugins
 Bundle 'HTML5-Syntax-File'
