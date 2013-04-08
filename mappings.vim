@@ -53,8 +53,12 @@ nmap <leader>l :set list!<CR>
 
 " edit vimrc
 nmap <leader>ve :e ~/.vimrc<CR>
+
 " source vimrc
 nmap <leader>vs :so ~/.vimrc<CR>
+
+" quick redraw
+nmap <f3> :redraw!<CR>
 
 " ===LISTS===
 

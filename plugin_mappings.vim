@@ -32,6 +32,9 @@ nmap <Leader>t :CtrlPTag<CR>
 " figlet
 nmap g@@ g@_
 
+" Gist
+let g:gist_clip_command = 'pbcopy'
+
 " ===EXTERNAL APPS===
 
 " open current file in Marked
