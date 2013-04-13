@@ -11,6 +11,7 @@ set ttimeoutlen=100             " Remove delay while escaping
 set background=dark             " Dark-colored background
 color solarized                 " Sexy, sexy colors
 set listchars=tab:▸\ ,eol:¬
+set mouse=a                     " Because I'm not a snob
 
 " Search settings 
 set incsearch              " Find the next match as we type the search
