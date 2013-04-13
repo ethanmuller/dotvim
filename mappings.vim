@@ -1,11 +1,7 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MAPPINGS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Set <leader> to comma
 let mapleader = ","
-
-" ===MISC===
 
 " Make ' more useful
 nnoremap ' `
@@ -17,7 +13,7 @@ vmap H ^
 nmap L $
 vmap L $
 
-" switch to last-used file
+" Switch to last-used file
 nnoremap <leader><leader> <C-^>
 
 " Move around splits with <c-hjkl>
@@ -33,75 +29,64 @@ nmap Y y$
 nmap Q @@
 vmap Q @@
 
-" ===INTERACTIVE MODE===
 " Alternate escape
 inoremap jk <Esc>
 
-" ===COMMAND MODE===
 cnoremap <C-j> <t_kd>
 cnoremap <C-k> <t_ku>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
-" ===SHORCUTS===
-
-" easily set filetype
+" Easily set filetype
 nmap <leader>ft :set filetype=
 
-" toggle visible characters
+" Toggle visible characters
 nmap <leader>l :set list!<CR>
 
-" edit vimrc
+" Edit vimrc
 nmap <leader>ve :e ~/.vimrc<CR>
 
-" source vimrc
+" Source vimrc
 nmap <leader>vs :so ~/.vimrc<CR>
 
-" quick redraw
+" Quick redraw
 nmap <f3> :redraw!<CR>
 
-" ===LISTS===
-
-" browse argument list easily
+" Browse argument list easily
 nmap ]a :next<CR>
 nmap [a :prev<CR>
 nmap ]A :last<CR>
 nmap [A :first<CR>
 
-" browse buffer list easily
+" Browse buffer list easily
 nmap ]b :bnext<CR>
 nmap [b :bprev<CR>
 nmap ]B :blast<CR>
 nmap [B :bfirst<CR>
 
-" browse quickfix list easily
+" Browse quickfix list easily
 nmap ]c :cnext<CR>
 nmap [c :cprev<CR>
 nmap ]C :clast<CR>
 nmap [C :cfirst<CR>
 
-" browse location list easily
+" Browse location list easily
 nmap ]l :lnext<CR>
 nmap [l :lprev<CR>
 nmap ]L :llast<CR>
 nmap [L :lfirst<CR>
 
-" ===OPERATOR PENDING===
-
-" css rules
+" Css text object
 onoremap <silent> R :<C-U>normal! j[{V]}<CR>
 vnoremap <silent> R :<C-U>normal! j[{V]}<CR>
 
-" ===EDITING===
 " Alphabetize stuff
 nmap <leader>s vii:!sort<CR>
 xmap <leader>s :!sort<CR>
 
-" Markdown
-" markdown italic
+" Markdown italic
 vmap <leader>mi S*
-" markdown bold
+" Markdown bold
 vmap <leader>mb S*gvS*
 
-" ===FUNCTIONS===
 nmap <leader>fw :call WriterMode()<CR>

@@ -1,21 +1,11 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" VUNDLE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" Vundle
 set nocompatible
 filetype off
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
 Bundle 'gmarik/vundle'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PLUGINS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" Plugins
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
@@ -32,8 +22,6 @@ Bundle 'mattn/gist-vim'
 Bundle 'ethanmuller/scratch.vim'
 Bundle 'Figlet.vim'
 Bundle 'mhinz/vim-signify'
-
-" syntax plugins
 Bundle 'HTML5-Syntax-File'
 Bundle 'Markdown'
 Bundle 'vim-coffee-script'
