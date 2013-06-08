@@ -12,6 +12,7 @@ color solarized                 " Sexy, sexy colors
 set listchars=tab:▸\ ,eol:¬
 set mouse=a                     " Because I'm not a snob
 set ttimeoutlen=100             " Remove delay while escaping
+set hlsearch
 
 " Search settings 
 set incsearch              " Find the next match as we type the search
