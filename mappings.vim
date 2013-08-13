@@ -3,16 +3,6 @@
 " Set <leader> to comma
 let mapleader = ","
 
-" Make ' more useful
-nnoremap ' `
-vnoremap ' `
-
-" Convenient $ and ^
-nmap H ^
-vmap H ^
-nmap L $
-vmap L $
-
 " Switch to last-used file
 nnoremap <leader><leader> <C-^>
 
@@ -32,8 +22,6 @@ vmap Q @@
 " Alternate escape
 inoremap jk <Esc>
 
-cnoremap <C-j> <t_kd>
-cnoremap <C-k> <t_ku>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
@@ -50,7 +38,7 @@ nmap <leader>ve :e ~/.vimrc<CR>
 nmap <leader>vs :so ~/.vimrc<CR>
 
 " Quick redraw
-nmap <f3> :redraw!<CR>
+nmap <leader>r :redraw!<CR>
 
 " Browse argument list easily
 nmap ]a :next<CR>
@@ -83,10 +71,3 @@ vnoremap <silent> R :<C-U>normal! j[{V]}<CR>
 " Alphabetize stuff
 nmap <leader>s vii:!sort<CR>
 xmap <leader>s :!sort<CR>
-
-" Markdown italic
-vmap <leader>mi S*
-" Markdown bold
-vmap <leader>mb S*gvS*
-
-nmap <leader>fw :call WriterMode()<CR>
