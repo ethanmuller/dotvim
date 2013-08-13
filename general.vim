@@ -13,7 +13,7 @@ set listchars=tab:▸\ ,eol:¬
 set mouse=a                     " Because I'm not a snob
 set ttimeoutlen=100             " Remove delay while escaping
 set hlsearch
-set gdefault
+set gdefault                    " Search globally by default
 
 " Search settings 
 set incsearch              " Find the next match as we type the search
