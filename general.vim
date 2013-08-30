@@ -11,7 +11,7 @@ set background=dark             " Dark-colored background
 color solarized                 " Sexy, sexy colors
 set listchars=tab:▸\ ,eol:¬
 set mouse=a                     " Because I'm not a snob
-set ttimeoutlen=100             " Remove delay while escaping
+set ttimeoutlen=0             " Remove delay while escaping
 set hlsearch
 set gdefault                    " Search globally by default
 
