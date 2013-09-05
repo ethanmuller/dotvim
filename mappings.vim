@@ -25,6 +25,11 @@ vmap Q @@
 
 " Alternate escape
 inoremap jk <Esc>
+inoremap kj <Esc>
+
+" And let's undo some habits
+inoremap <Esc> <nop>
+inoremap <c-[> <nop>
 
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
