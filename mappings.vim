@@ -6,6 +6,10 @@ let mapleader = ","
 " Switch to last-used file
 nnoremap <leader><leader> <C-^>
 
+" Easily toggle hlsearch
+nmap <leader>/ :set hlsearch!<CR>
+vmap <leader>/ :set hlsearch!<CR>
+
 " Move around splits with <c-hjkl>
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
@@ -63,10 +67,6 @@ nmap ]l :lnext<CR>
 nmap [l :lprev<CR>
 nmap ]L :llast<CR>
 nmap [L :lfirst<CR>
-
-" Css text object
-onoremap <silent> R :<C-U>normal! j[{V]}<CR>
-vnoremap <silent> R :<C-U>normal! j[{V]}<CR>
 
 " Alphabetize stuff
 nmap <leader>s vii:!sort<CR>
