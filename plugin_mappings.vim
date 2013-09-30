@@ -6,6 +6,8 @@ nmap <Leader>gp :Git push<CR>
 nmap <Leader>gu :Git pull<CR>
 nmap <Leader>gd :Gdiff<CR>
 nmap <leader>gl :Glog<cr>
+nmap <leader>gL :Git log<cr>
+nmap <leader>gb :Gblame<cr>
 
 " CtrlP
 " mneumonic: open MRU
