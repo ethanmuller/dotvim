@@ -18,25 +18,6 @@ let g:airline_theme='solarized'
 set laststatus=2
 
 " textobj-user
-call textobj#user#plugin('datetime', {
-  \   'date': {
-  \     'pattern': '\<\d\d\d\d-\d\d-\d\d\>',
-  \     'select': ['ad', 'id'],
-  \   },
-  \   'time': {
-  \     'pattern': '\<\d\d:\d\d:\d\d\>',
-  \     'select': ['at', 'it'],
-  \   },
-  \ })
-
-call textobj#user#plugin('php', {
-  \   'code': {
-  \     'pattern': ['<?php\>', '?>'],
-  \     'select-a': 'aP',
-  \     'select-i': 'iP',
-  \   },
-  \ })
-
 call textobj#user#plugin('css', {
 \  'rule': {
 \    'select-a-function': 'CurrentRuleWhitespace',
