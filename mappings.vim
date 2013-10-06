@@ -68,7 +68,11 @@ nmap ]l :lnext<CR>
 nmap [l :lprev<CR>
 nmap ]L :llast<CR>
 nmap [L :lfirst<CR>
+" also with "e" as a mnemonic for error
+nmap ]e :lnext<CR>
+nmap [e :lprev<CR>
+nmap ]E :llast<CR>
+nmap [E :lfirst<CR>
 
-" Alphabetize stuff
-nmap <leader>s vii:!sort<CR>
-xmap <leader>s :!sort<CR>
+" convenient toggling of spellchecker
+nmap <leader>s :set spell!<CR>

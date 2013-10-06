@@ -16,3 +16,6 @@ let g:airline_enable_branch=1
 let g:airline_branch_empty_message=''
 let g:airline_theme='solarized'
 set laststatus=2
+
+" Syntastic
+let g:syntastic_always_populate_loc_list=1
