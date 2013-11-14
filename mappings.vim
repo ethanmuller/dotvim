@@ -76,3 +76,7 @@ nmap [E :lfirst<CR>
 
 " convenient toggling of spellchecker
 nmap <leader>s :set spell!<CR>
+"
+" Create newlines without entering insert mode
+nnoremap go o<Esc>k
+nnoremap gO O<Esc>j
