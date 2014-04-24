@@ -31,8 +31,9 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 
 " Ember.vim
+nnoremap <leader>ec :Econtroller<space>
 nnoremap <leader>ea :Easset<space>
-nnoremap <leader>err :Eroute<space>
-nnoremap <leader>ert :Econfig router<CR>
+nnoremap <leader>ert :Eroute<space>
+nnoremap <leader>err :Econfig router<CR>
 nnoremap <leader>et :Etemplate<space>
 nnoremap <leader>em :Emodel<space>

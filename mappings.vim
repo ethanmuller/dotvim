@@ -37,9 +37,12 @@ nmap <leader>ft :set filetype=
 nmap <leader>l :set list!<CR>
 
 " Edit vimrc
-nmap <leader>ve :e ~/.vimrc<CR>
+nmap <leader>Ev :e ~/.vimrc<CR>
+nmap <leader>Ez :e ~/.zshrc<CR>
+nmap <leader>Ea :e ~/dotfiles/aliases.sh<CR>
 
 " Source vimrc
+nmap <leader>ve :e ~/.vimrc<CR>
 nmap <leader>vs :so ~/.vimrc<CR>
 
 " Quick redraw
@@ -80,3 +83,12 @@ nmap <leader>s :set spell!<CR>
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
 nnoremap gO O<Esc>j
+
+" I do a lot of console.logs
+iabbr cl console.log
+
+" Expand for current directory
+cabbr <expr> %% expand('%:p:h')
+
+" Insert date
+iabbr ddate <C-R>=strftime("%Y-%m-%d")<CR>

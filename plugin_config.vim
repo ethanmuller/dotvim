@@ -38,3 +38,7 @@ let NERDSpaceDelims = 1
 " portkey
 let g:portkey_autostart = 1
 
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
