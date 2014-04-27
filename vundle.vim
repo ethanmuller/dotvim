@@ -20,7 +20,7 @@ Bundle 'Syntastic'
 Bundle 'dsawardekar/portkey'
 Bundle 'dsawardekar/ember.vim'
 
-" Convenience
+" Helpers
 Bundle 'mattn/emmet-vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-fugitive'
