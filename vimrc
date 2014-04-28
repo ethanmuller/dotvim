@@ -9,9 +9,6 @@ filetype plugin indent on
 " Load general configuration
 source ~/.vim/general.vim
 
-" Load functions
-source ~/.vim/functions.vim
-
 " Load handy-dandy general vim mappings
 source ~/.vim/mappings.vim
 
