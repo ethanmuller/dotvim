@@ -28,7 +28,6 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ack.vim'
-Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'Figlet.vim'
 
@@ -39,3 +38,6 @@ Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'html5.vim'
 Bundle 'JSON.vim'
 Bundle 'mustache/vim-mustache-handlebars'
+
+" Libraries
+Bundle 'mattn/webapi-vim'
