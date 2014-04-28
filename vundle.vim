@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-"Features
+" Features
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'matchit.zip'
@@ -31,7 +31,7 @@ Bundle 'ack.vim'
 Bundle 'mattn/gist-vim'
 Bundle 'Figlet.vim'
 
-"Syntax
+" Syntax
 Bundle 'vim-stylus'
 Bundle 'vim-coffee-script'
 Bundle 'jtratner/vim-flavored-markdown'
