@@ -19,6 +19,8 @@ Bundle 'kana/vim-textobj-indent'
 Bundle 'Syntastic'
 Bundle 'dsawardekar/portkey'
 Bundle 'dsawardekar/ember.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'dhruvasagar/vim-vinegar'
 
 " Helpers
 Bundle 'mattn/emmet-vim'
