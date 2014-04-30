@@ -21,6 +21,7 @@ Bundle 'dsawardekar/portkey'
 Bundle 'dsawardekar/ember.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'dhruvasagar/vim-vinegar'
+Bundle 'abolish.vim'
 
 " Helpers
 Bundle 'mattn/emmet-vim'
