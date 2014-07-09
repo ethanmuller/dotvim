@@ -37,3 +37,9 @@ nnoremap <leader>ert :Eroute<space>
 nnoremap <leader>err :Econfig router<CR>
 nnoremap <leader>et :Etemplate<space>
 nnoremap <leader>em :Emodel<space>
+
+"Goyo
+nnoremap <leader>w :Goyo<CR>
+
+" switch.vim
+nnoremap <leader>t :Switch<CR>

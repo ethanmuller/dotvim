@@ -8,7 +8,6 @@ nnoremap <leader><leader> <C-^>
 
 " Easily toggle hlsearch
 nmap <leader>/ :set hlsearch!<CR>
-vmap <leader>/ :set hlsearch!<CR>
 
 " Move around splits with <c-hjkl>
 nmap <c-j> <c-w>j

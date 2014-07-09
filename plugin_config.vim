@@ -45,3 +45,33 @@ augroup END
 
 "NERDTree
 let NERDTreeShowLineNumbers=1
+
+"Goyo
+function! g:goyo_before()
+  set wrap
+  nmap j gj
+  nmap k gk
+endfunction
+
+function! g:goyo_after()
+  set nowrap
+  unmap j
+  unmap k
+endfunction
+
+let g:goyo_callbacks = [function('g:goyo_before'), function('g:goyo_after')]
+
+" switch.vim
+let g:switch_custom_definitions =
+  \ [
+  \   ['foo', 'bar', 'baz'],
+  \   ['light', 'dark'],
+  \   ['bottom', 'top'],
+  \   ['left', 'right'],
+  \   ['width', 'height'],
+  \   ['red', 'green', 'blue'],
+  \   ['white', 'gray', 'black']
+  \ ]
+
+" GIFL
+let g:LuckyOutputFormat='markdown'

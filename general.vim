@@ -7,6 +7,7 @@ set autoread                    " Reload files changed outside vim
 set iskeyword+=-,$              " Include some nice characters in words
 set hidden                      " Buffers can exist in the background without being in a window.
 syntax on                       " Activate syntax highlighting
+set synmaxcol=120               " set limit on syntax highlighting, otherwise vim gets slow with long lines
 set background=dark             " Dark-colored background
 color solarized                 " Sexy, sexy colors
 set listchars=tab:▸\ ,eol:¬
