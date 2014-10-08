@@ -91,3 +91,6 @@ cabbr <expr> %% expand('%:p:h')
 
 " Insert date
 iabbr ddate <C-R>=strftime("%Y-%m-%d")<CR>
+
+" Open current file in default app
+map <leader>o !open %<CR>

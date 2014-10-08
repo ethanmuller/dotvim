@@ -20,15 +20,19 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'dhruvasagar/vim-vinegar'
 Bundle 'junegunn/goyo.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'supertab'
 
 " Helpers
 Bundle 'mattn/emmet-vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-scripts/summerfruit256.vim'
 Bundle 'ack.vim'
+Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'Figlet.vim'
 Bundle 'AndrewRadev/switch.vim'
+Bundle 'tpope/vim-eunuch'
 
 " Syntax
 Bundle 'vim-stylus'

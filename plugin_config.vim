@@ -47,19 +47,21 @@ augroup END
 let NERDTreeShowLineNumbers=1
 
 "Goyo
-function! g:goyo_before()
+function! g:goyo_enter()
+  set background=light
+  color summerfruit256
+
   set wrap
   nmap j gj
   nmap k gk
 endfunction
 
-function! g:goyo_after()
-  set nowrap
-  unmap j
-  unmap k
+function! g:goyo_exit()
+  set background=dark
+  color solarized
 endfunction
 
-let g:goyo_callbacks = [function('g:goyo_before'), function('g:goyo_after')]
+let g:goyo_callbacks = [function('g:goyo_enter'), function('g:goyo_exit')]
 
 " switch.vim
 let g:switch_custom_definitions =
@@ -68,6 +70,8 @@ let g:switch_custom_definitions =
   \   ['light', 'dark'],
   \   ['bottom', 'top'],
   \   ['left', 'right'],
+  \   ['one', 'two', 'three'],
+  \   ['red', 'green'],
   \   ['width', 'height'],
   \   ['red', 'green', 'blue'],
   \   ['white', 'gray', 'black']

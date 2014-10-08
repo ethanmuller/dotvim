@@ -7,15 +7,15 @@ set autoread                    " Reload files changed outside vim
 set iskeyword+=-,$              " Include some nice characters in words
 set hidden                      " Buffers can exist in the background without being in a window.
 syntax on                       " Activate syntax highlighting
-set synmaxcol=120               " set limit on syntax highlighting, otherwise vim gets slow with long lines
-set background=dark             " Dark-colored background
-color solarized                 " Sexy, sexy colors
+" set synmaxcol=200               " set limit on syntax highlighting, otherwise vim gets slow with long lines
 set listchars=tab:▸\ ,eol:¬
 set mouse=a                     " Because I'm not a snob
 set ttimeoutlen=0               " Remove delay while escaping
 set hlsearch
-set gdefault                    " Search globally by default
 set spell                       " Enable spellchecker
+
+set background=dark             " Dark-colored background
+color solarized                 " Sexy, sexy colors
 
 " Search settings 
 set incsearch              " Find the next match as we type the search
