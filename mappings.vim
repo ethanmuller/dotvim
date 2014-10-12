@@ -65,7 +65,10 @@ nmap [e :lprev<CR>
 nmap ]E :llast<CR>
 nmap [E :lfirst<CR>
 
-" convenient toggling of spellchecker
+" Easily toggle hlsearch
+nmap <leader>/ :set hlsearch!<CR>
+
+" Easily toggle spellchecker
 nmap <leader>s :set spell!<CR>
 
 " Create newlines without entering insert mode

@@ -1,7 +1,10 @@
-" --- General config ---
+" --- GENERAL CONFIG ---
 
 " Turn on line  numbers
 set number
+
+" Activate syntax highlighting
+syntax on
 
 " Buffers can exist in the background without being in a window.
 set hidden
@@ -18,9 +21,6 @@ set autoread
 " Include some nice characters in words
 set iskeyword+=-,$
 
-" Activate syntax highlighting
-syntax on
-
 " Enable mouse
 set mouse=a
 
@@ -34,7 +34,7 @@ set spell
 set background=light
 color seoul256-light
 
-" --- Search settings ---
+" --- SEARCH SETTINGS ---
 
 " Find the next match as we type the search
 set incsearch
@@ -48,7 +48,7 @@ set viminfo='100,f1
 " Highlight search terms
 set hlsearch
 
-" --- Directories ---
+" --- DIRECTORIES ---
 
 " for backups
 set backupdir=~/.vim/backups//,.
@@ -60,7 +60,7 @@ set undodir=~/.vim/undos//,.
 " for swaps
 set directory=~/.vim/swaps//,.
 
-" --- Formatting ---
+" --- FORMATTING ---
 set smartindent
 set smarttab
 set expandtab
@@ -76,12 +76,12 @@ set linebreak
 " No automatic comments on new lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" --- Folds ---
+" --- FOLDS ---
 
 " Don't fold by default
 set nofoldenable
 
-" --- Completion ---
+" --- COMPLETION ---
 set wildmode=list:longest
 
 " Enable ctrl-n and ctrl-p to scroll thru matches
@@ -100,7 +100,7 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*node_modules/**
 
-" --- Scrolling ---
+" --- SCROLLING ---
 
 " Start scrolling when we're 8 lines away from margins
 set scrolloff=8
@@ -111,7 +111,7 @@ vnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 vnoremap <C-y> 3<C-y>
 
-" --- Auto commands ---
+" --- AUTO COMMANDS ---
 
 " Resize all windows when vim is resized
 au VimResized * exe "normal! \<c-w>="
