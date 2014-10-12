@@ -1,54 +1,97 @@
-" General config
-set number                      " Line numbers are good
-set history=1000                " Store lots of :cmdline history
-set showcmd                     " Show incomplete cmds down the bottom
-set showmode                    " Show current mode down the bottom
-set autoread                    " Reload files changed outside vim
-set iskeyword+=-,$              " Include some nice characters in words
-set hidden                      " Buffers can exist in the background without being in a window.
-syntax on                       " Activate syntax highlighting
-" set synmaxcol=200               " set limit on syntax highlighting, otherwise vim gets slow with long lines
-set listchars=tab:▸\ ,eol:¬
-set mouse=a                     " Because I'm not a snob
-set ttimeoutlen=0               " Remove delay while escaping
-set hlsearch
-set spell                       " Enable spellchecker
+" --- General config ---
 
+" Line numbers are good
+set number
+
+" Store lots of :cmdline history
+set history=1000
+
+" Show incomplete cmds down the bottom
+set showcmd
+
+" Show current mode down the bottom
+set showmode
+
+" Reload files changed outside vim
+set autoread
+
+" Include some nice characters in words
+set iskeyword+=-,$
+
+" Buffers can exist in the background without being in a window.
+set hidden
+
+" Activate syntax highlighting
+syntax on
+set listchars=tab:▸\ ,eol:¬
+
+" Because I'm not a snob
+set mouse=a
+
+" Remove delay while escaping
+set ttimeoutlen=0
+set hlsearch
+
+" Enable spellchecker
+set spell
+
+" Nice look and feel
 set background=light
 color seoul256-light
 
-" Search settings 
-set incsearch              " Find the next match as we type the search
-set ignorecase smartcase   " Ignore case, unless capitals are used
-set viminfo='100,f1        " Save up to 100 marks, enable capital marks
 
-" Directories
-set backupdir=~/.vim/backups//,.  " for backups
+" --- Search settings  ---
 
+" Find the next match as we type the search
+set incsearch
+
+" Ignore case, unless capitals are used
+set ignorecase smartcase
+
+" Save up to 100 marks, enable capital marks
+set viminfo='100,f1
+
+" --- Directories ---
+
+" for backups
+set backupdir=~/.vim/backups//,.
 set undofile
-set undodir=~/.vim/undos//,.      " for undos
 
-set directory=~/.vim/swaps//,.    " for swaps
+" for undos
+set undodir=~/.vim/undos//,.
 
-" Formatting
+" for swaps
+set directory=~/.vim/swaps//,.
+
+" --- Formatting ---
 set smartindent
 set smarttab
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-set nowrap       " Don't wrap lines
-set linebreak    " Wrap lines at convenient points
 
-" No automatic comments on new lines
+" Don't wrap lines
+set nowrap
+
+" Wrap lines at convenient points
+set linebreak
+
+" --- No automatic comments on new lines ---
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Folds
-set nofoldenable        "dont fold by default
+" --- Folds ---
 
-" Completion
+"dont fold by default
+set nofoldenable
+
+" --- Completion ---
 set wildmode=list:longest
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~,*.psd,*.jpg,*.png,*.ai "stuff to ignore when tab completing
+
+"enable ctrl-n and ctrl-p to scroll thru matches
+set wildmenu
+
+"stuff to ignore when tab completing
+set wildignore=*.o,*.obj,*~,*.psd,*.jpg,*.png,*.ai
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
@@ -60,8 +103,10 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*node_modules/**
 
-" Scrolling
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+" --- Scrolling ---
+
+" Start scrolling when we're 8 lines away from margins
+set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
 nnoremap <C-e> 3<C-e> 
@@ -69,5 +114,7 @@ vnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 vnoremap <C-y> 3<C-y>
 
-" Auto commands
+" --- Auto commands ---
+
+" Resize all windows when vim is resized
 au VimResized * exe "normal! \<c-w>="
