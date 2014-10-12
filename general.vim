@@ -1,7 +1,10 @@
 " --- General config ---
 
-" Line numbers are good
+" Turn on line  numbers
 set number
+
+" Buffers can exist in the background without being in a window.
+set hidden
 
 " Store lots of :cmdline history
 set history=1000
@@ -9,38 +12,29 @@ set history=1000
 " Show incomplete cmds down the bottom
 set showcmd
 
-" Show current mode down the bottom
-set showmode
-
 " Reload files changed outside vim
 set autoread
 
 " Include some nice characters in words
 set iskeyword+=-,$
 
-" Buffers can exist in the background without being in a window.
-set hidden
-
 " Activate syntax highlighting
 syntax on
-set listchars=tab:▸\ ,eol:¬
 
-" Because I'm not a snob
+" Enable mouse
 set mouse=a
 
 " Remove delay while escaping
 set ttimeoutlen=0
-set hlsearch
 
 " Enable spellchecker
 set spell
 
-" Nice look and feel
+" Nice colors
 set background=light
 color seoul256-light
 
-
-" --- Search settings  ---
+" --- Search settings ---
 
 " Find the next match as we type the search
 set incsearch
@@ -50,6 +44,9 @@ set ignorecase smartcase
 
 " Save up to 100 marks, enable capital marks
 set viminfo='100,f1
+
+" Highlight search terms
+set hlsearch
 
 " --- Directories ---
 
@@ -76,21 +73,21 @@ set nowrap
 " Wrap lines at convenient points
 set linebreak
 
-" --- No automatic comments on new lines ---
+" No automatic comments on new lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " --- Folds ---
 
-"dont fold by default
+" Don't fold by default
 set nofoldenable
 
 " --- Completion ---
 set wildmode=list:longest
 
-"enable ctrl-n and ctrl-p to scroll thru matches
+" Enable ctrl-n and ctrl-p to scroll thru matches
 set wildmenu
 
-"stuff to ignore when tab completing
+" Stuff to ignore when tab completing
 set wildignore=*.o,*.obj,*~,*.psd,*.jpg,*.png,*.ai
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
