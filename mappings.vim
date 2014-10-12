@@ -1,7 +1,6 @@
 " MAPPINGS
 
-" Set <leader> to comma
-let mapleader = ","
+let mapleader="\<Space>"
 
 " Switch to last-used file
 nnoremap <leader><leader> <C-^>
@@ -24,6 +23,7 @@ vmap Q @@
 
 " Alternate escape
 inoremap jk <Esc>
+inoremap kj <Esc>
 
 " Nice and shell-y command mode
 cnoremap <C-a> <Home>
@@ -85,6 +85,8 @@ nnoremap gO O<Esc>j
 
 " I do a lot of console.logs
 iabbr cl console.log
+
+iabbr iunno ¯\_(ツ)_/¯
 
 " Expand for current directory
 cabbr <expr> %% expand('%:p:h')

@@ -14,8 +14,8 @@ set ttimeoutlen=0               " Remove delay while escaping
 set hlsearch
 set spell                       " Enable spellchecker
 
-set background=dark             " Dark-colored background
-color solarized                 " Sexy, sexy colors
+set background=light
+color seoul256-light
 
 " Search settings 
 set incsearch              " Find the next match as we type the search
@@ -38,7 +38,9 @@ set shiftwidth=2
 set softtabstop=2
 set nowrap       " Don't wrap lines
 set linebreak    " Wrap lines at convenient points
-set formatoptions-=cro
+
+" No automatic comments on new lines
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Folds
 set nofoldenable        "dont fold by default
