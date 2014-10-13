@@ -35,19 +35,16 @@ let NERDTreeShowLineNumbers=1
 
 "--- Goyo ---
 function! g:Goyo_enter()
-  set background=light
-  color summerfruit256
-
   set wrap
   nmap j gj
   nmap k gk
 endfunction
 
 function! g:Goyo_exit()
-  set background=dark
-  color solarized
 endfunction
+
 let g:goyo_callbacks = [function('g:Goyo_enter'), function('g:Goyo_exit')]
+
 nnoremap <leader>w :Goyo<CR>
 
 "--- switch.vim ---

@@ -18,9 +18,6 @@ set iskeyword+=-,$
 " Enable mouse
 set mouse=a
 
-" Enable spellchecker
-set spell
-
 " Nice colors
 set background=light
 color seoul256-light
