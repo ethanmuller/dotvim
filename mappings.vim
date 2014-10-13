@@ -29,8 +29,8 @@ nmap <leader>Ez :e ~/.zshrc<CR>
 nmap <leader>Ea :e ~/dotfiles/aliases.sh<CR>
 
 " Source vimrc
-nmap <leader>ve :e ~/.vimrc<CR>
-nmap <leader>vs :so ~/.vimrc<CR>
+nmap <leader>ve :e $MYVIMRC<CR>
+nmap <leader>vs :so $MYVIMRC<CR>
 
 " Quick redraw
 nmap <leader>r :redraw!<CR>

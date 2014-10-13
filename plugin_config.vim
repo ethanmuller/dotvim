@@ -25,7 +25,7 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 " set up Ag command for ag search
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+"command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
 "--- NERDCommenter ---
 let NERDSpaceDelims = 1
