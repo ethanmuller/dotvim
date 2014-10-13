@@ -1,7 +1,7 @@
 vim-dotfiles
 ============
 
-It's my Vim dotfiles, silly.
+Vim dotfiles. Yes, they deserve their own repo.
 
 ## Installation
 
