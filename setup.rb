@@ -32,7 +32,7 @@ end
 
 class Linker
   def safeLink (file)
-    puts "Linking #{file}"
+    puts "Linking #{full_file(file)}"
 
     if File.exists?(dest_file(file))
       backup dest_file(file)
@@ -43,6 +43,7 @@ class Linker
 
   def link (file)
     ln_s(full_file(file), dest_file(file))
+
     puts "Linked #{dest_file(file)} -> #{full_file(file)}\n".cyan
   end
 
@@ -67,7 +68,10 @@ class Linker
       file = file.sub('_', '.')
     end
 
-    puts file
+    if file == '.'
+      # This directory is being linked
+      file = '.vim'
+    end
 
     return file
   end
