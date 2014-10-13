@@ -36,6 +36,7 @@ let NERDTreeShowLineNumbers=1
 "--- Goyo ---
 function! g:Goyo_enter()
   set wrap
+  set linebreak
   nmap j gj
   nmap k gk
 endfunction
