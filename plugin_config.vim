@@ -34,17 +34,22 @@ let NERDSpaceDelims = 1
 let NERDTreeShowLineNumbers=1
 
 "--- GOYO ---
-function! g:Goyo_enter()
+function! s:goyo_enter()
   set wrap
   set linebreak
   nmap j gj
   nmap k gk
+  set scrolloff=999
 endfunction
 
-function! g:Goyo_exit()
+function! s:goyo_leave()
+  set scrolloff=8
 endfunction
 
-let g:goyo_callbacks = [function('g:Goyo_enter'), function('g:Goyo_exit')]
+autocmd! User GoyoEnter
+autocmd! User GoyoLeave
+autocmd  User GoyoEnter nested call <SID>goyo_enter()
+autocmd  User GoyoLeave nested call <SID>goyo_leave()
 
 nnoremap <leader>w :Goyo<CR>
 

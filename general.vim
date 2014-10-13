@@ -54,6 +54,9 @@ set directory=~/.vim/swaps/,/tmp
 
 " --- FORMATTING ---
 
+" Match previous line's indentation
+set autoindent
+
 " Insert indentation according to shiftwidth
 set smarttab
 
