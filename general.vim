@@ -1,16 +1,7 @@
 " --- GENERAL CONFIG ---
 
-" Turn on line  numbers
-set number
-
-" ... And make them relative
+" Make line numbers relative
 set relativenumber
-
-" Activate syntax highlighting
-syntax on
-
-" Buffers can exist in the background without being in a window.
-set hidden
 
 " Store lots of :cmdline history
 set history=1000
@@ -27,15 +18,15 @@ set iskeyword+=-,$
 " Enable mouse
 set mouse=a
 
-" Remove delay while escaping
-set ttimeoutlen=0
-
 " Enable spellchecker
 set spell
 
 " Nice colors
 set background=light
 color seoul256-light
+
+" Don't fold by default
+set nofoldenable
 
 " --- SEARCH SETTINGS ---
 
@@ -54,41 +45,40 @@ set hlsearch
 " --- DIRECTORIES ---
 
 " for backups
-set backupdir=~/.vim/backups//,.
+set backup
+set backupdir=~/.vim/backups/,/tmp
 set undofile
 
 " for undos
-set undodir=~/.vim/undos//,.
+set undodir=~/.vim/undos/,/tmp
 
 " for swaps
-set directory=~/.vim/swaps//,.
+set directory=~/.vim/swaps/,/tmp
 
 " --- FORMATTING ---
-set smartindent
+
+" Insert indentation according to shiftwidth
 set smarttab
+
+" insert spaces instead of tabs
 set expandtab
+
+" Tab widths
 set shiftwidth=2
 set softtabstop=2
 
 " Don't wrap lines
 set nowrap
 
-" Wrap lines at convenient points
-set linebreak
-
 " No automatic comments on new lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" --- FOLDS ---
-
-" Don't fold by default
-set nofoldenable
-
 " --- COMPLETION ---
-set wildmode=list:longest
 
-" Enable ctrl-n and ctrl-p to scroll thru matches
+" ctrl-n and ctrl-p scroll thru matches on command line
 set wildmenu
+
+set wildmode=list:longest
 
 " Stuff to ignore when tab completing
 set wildignore=*.o,*.obj,*~,*.psd,*.jpg,*.png,*.ai
@@ -114,7 +104,10 @@ vnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 vnoremap <C-y> 3<C-y>
 
-" --- AUTO COMMANDS ---
+" --- Fixes ---
+
+" Remove delay while escaping
+set ttimeoutlen=0
 
 " Resize all windows when vim is resized
 au VimResized * exe "normal! \<c-w>="

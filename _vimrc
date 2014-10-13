@@ -2,6 +2,7 @@
 source ~/.vim/plugins.vim
 
 " Load general configuration
+source ~/.vim/essentials.vim
 source ~/.vim/general.vim
 
 " Load handy-dandy general vim mappings
