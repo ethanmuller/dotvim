@@ -1,8 +1,8 @@
-"--- CtrlP ---
+"--- CTRLP ---
 let g:ctrlp_open_multiple_files = 'i'
 nmap <leader>m :CtrlPMRUFiles<CR>
 
-"--- Gist.vim ---
+"--- GIST.VIM ---
 if has('macunix') || has('mac')
   let g:gist_clip_command = 'pbcopy'
 endif
@@ -10,10 +10,10 @@ let g:gist_post_private = 1
 let g:gist_get_multiplefile = 1
 let g:gist_clip_command = 'pbcopy'
 
-"--- Syntastic ---
+"--- SYNTASTIC ---
 let g:syntastic_always_populate_loc_list=1
 
-"--- The Silver Searcher ---
+"--- THE SILVER SEARCHER ---
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
@@ -27,13 +27,13 @@ endif
 " set up Ag command for ag search
 "command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
-"--- NERDCommenter ---
+"--- NERDCOMMENTER ---
 let NERDSpaceDelims = 1
 
-"--- NERDTree ---
+"--- NERDTREE ---
 let NERDTreeShowLineNumbers=1
 
-"--- Goyo ---
+"--- GOYO ---
 function! g:Goyo_enter()
   set wrap
   set linebreak
@@ -48,7 +48,7 @@ let g:goyo_callbacks = [function('g:Goyo_enter'), function('g:Goyo_exit')]
 
 nnoremap <leader>w :Goyo<CR>
 
-"--- switch.vim ---
+"--- SWITCH.VIM ---
 let g:switch_custom_definitions =
   \ [
   \   ['foo', 'bar', 'baz'],
@@ -63,7 +63,7 @@ let g:switch_custom_definitions =
   \ ]
 nnoremap <leader>t :Switch<CR>
 
-"--- Fugitive ---
+"--- FUGITIVE ---
 nmap <Leader>gc :Gcommit -v<CR>
 nmap <Leader>gw :Gwrite<CR>
 nmap <Leader>gs :Gstatus<CR>
