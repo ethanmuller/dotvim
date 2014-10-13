@@ -3,6 +3,9 @@
 " Turn on line  numbers
 set number
 
+" ... And make them relative
+set relativenumber
+
 " Activate syntax highlighting
 syntax on
 

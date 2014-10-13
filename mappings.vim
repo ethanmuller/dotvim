@@ -65,18 +65,21 @@ nmap [e :lprev<CR>
 nmap ]E :llast<CR>
 nmap [E :lfirst<CR>
 
-" Easily toggle hlsearch
-nmap <leader>/ :set hlsearch!<CR>
-
-" Easily toggle spellchecker
-nmap <leader>s :set spell!<CR>
-
 " Create newlines without entering insert mode
 nnoremap go o<Esc>k
 nnoremap gO O<Esc>j
 
 " Open current file in default app
 nmap <leader>o !open %<CR>
+
+" Toggle relative numbering
+nmap <leader>n :set relativenumber!<CR>
+
+" Toggle hlsearch
+nmap <leader>/ :set hlsearch!<CR>
+
+" Toggle spell check
+nmap <leader>s :set spell!<CR>
 
 " --- Insert Mode Mappings ---
 

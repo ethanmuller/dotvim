@@ -1,6 +1,6 @@
 "--- CtrlP ---
 let g:ctrlp_open_multiple_files = 'i'
-nmap <Leader>m :CtrlPMRUFiles<CR>
+nmap <leader>m :CtrlPMRUFiles<CR>
 
 "--- Gist.vim ---
 if has('macunix') || has('mac')

@@ -15,50 +15,74 @@
 require 'fileutils'
 include FileUtils
 
-files = [
-  '_vimrc',
-]
+class String
+  # colorization
+  def colorize(color_code)
+    "\e[#{color_code}m#{self}\e[0m"
+  end
 
-class ConfigFile
+  def yellow
+    colorize(33)
+  end
 
-  def install (file)
-    if exists? file
-      destFile = file.sub('_', '.')
-      puts "Looks like #{destFile} already exists. Backing it up."
-      backup file
+  def cyan
+    colorize(36)
+  end
+end
+
+class Linker
+  def safeLink (file)
+    puts "Linking #{file}"
+
+    if File.exists?(dest_file(file))
+      backup dest_file(file)
     end
 
     link file
   end
 
-  private
-
-  def exists? (file)
-    # Check if given config exists
-    homeDir = ENV['HOME']
-    destFile = file.sub('_', '.')
-
-    File.exists?( "#{homeDir}/#{destFile}" )
+  def link (file)
+    ln_s(full_file(file), dest_file(file))
+    puts "Linked #{dest_file(file)} -> #{full_file(file)}\n".cyan
   end
 
   def backup (file)
-    # Back up existing config
-    homeDir = ENV['HOME']
-    destFile = file.sub('_', '.')
-    oldFile = "#{homeDir}/#{destFile}"
-    timestamp = Time.new.strftime('%H-%M-%S')
-    mv(oldFile, "#{oldFile}_#{timestamp}")
+    timestamp = '_' + Time.new.strftime('%H-%M-%S')
+
+    new_name = file + timestamp
+
+    mv(file, new_name)
+
+    puts "Backed up #{file} to #{new_name}".yellow
   end
 
-  def link (file)
-    # Link config into place
-    homeDir = ENV['HOME']
-    destFile = file.sub('_', '.')
-    currentDir = Dir.pwd
-    ln_s("#{currentDir}/#{file}", "#{homeDir}/#{destFile}")
+  def install_dir
+    File.expand_path('~') + '/'
+  end
+
+  def dest_name (file)
+    # The name a file will have
+    # in its installed destination
+    if file[0] == '_'
+      file = file.sub('_', '.')
+    end
+
+    puts file
+
+    return file
+  end
+
+  def dest_file (file)
+    install_dir + dest_name(file)
+  end
+
+  def full_file (file)
+    File.expand_path(file)
   end
 end
 
-files.each { |file|
-  ConfigFile.new.install file
-}
+# link vimrc into place
+Linker.new.safeLink '_vimrc'
+
+# link this directory into place
+Linker.new.safeLink '.'
