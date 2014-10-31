@@ -30,6 +30,10 @@ endif
 "--- NERDCOMMENTER ---
 let NERDSpaceDelims = 1
 
+let g:NERDCustomDelimiters = {
+    \ 'handlebars': { 'left': '{{!--', 'right': '--}}' }
+\ }
+
 "--- NERDTREE ---
 let NERDTreeShowLineNumbers=1
 
@@ -37,6 +41,7 @@ let NERDTreeShowLineNumbers=1
 function! s:goyo_enter()
   set wrap
   set linebreak
+  set relativenumber
   nmap j gj
   nmap k gk
   set scrolloff=999
@@ -52,6 +57,8 @@ autocmd  User GoyoEnter nested call <SID>goyo_enter()
 autocmd  User GoyoLeave nested call <SID>goyo_leave()
 
 nnoremap <leader>w :Goyo<CR>
+let g:goyo_margin_top = 0
+let g:goyo_margin_bottom = 0
 
 "--- SWITCH.VIM ---
 let g:switch_custom_definitions =
@@ -64,7 +71,10 @@ let g:switch_custom_definitions =
   \   ['red', 'green'],
   \   ['width', 'height'],
   \   ['red', 'green', 'blue'],
-  \   ['white', 'gray', 'black']
+  \   ['white', 'gray', 'black'],
+  \   ['sm', 'md', 'lg'],
+  \   ['primary', 'secondary'],
+  \   ['gap', 'old-navy', 'banana-republic', 'piperlime', 'athleta']
   \ ]
 nnoremap <leader>t :Switch<CR>
 
@@ -78,3 +88,18 @@ nmap <Leader>gd :Gdiff<CR>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gL :Git log<cr>
 nmap <leader>gb :Gblame<cr>
+
+"--- EMMET ---
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+"--- TEXTOBJ-USER ---
+call textobj#user#plugin('datetime', {
+\   'date': {
+\     'pattern': '\<\d\d\d\d-\d\d-\d\d\>',
+\     'select': ['ad', 'id'],
+\   },
+\   'time': {
+\     'pattern': '\<\d\d:\d\d:\d\d\>',
+\     'select': ['at', 'it'],
+\   },
+\ })

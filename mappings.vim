@@ -1,4 +1,4 @@
-let mapleader="\<Space>"
+let mapleader=" "
 
 " --- Normal Mode Mappings ---
 
@@ -70,7 +70,7 @@ nnoremap go o<Esc>k
 nnoremap gO O<Esc>j
 
 " Open current file in default app
-nmap <leader>o !open %<CR>
+nmap <leader>o :!open "%"<CR>
 
 " Toggle relative numbering
 nmap <leader>n :set relativenumber!<CR>

@@ -19,8 +19,8 @@ set iskeyword+=-,$
 set mouse=a
 
 " Nice colors
-set background=light
-color seoul256-light
+set background=dark
+color solarized
 
 " Don't fold by default
 set nofoldenable
