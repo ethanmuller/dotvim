@@ -19,6 +19,7 @@ Plug 'esneider/YUNOcommit.vim'
 Plug 'rking/ag.vim'
 Plug 'schickling/vim-bufonly'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'tpope/vim-unimpaired'
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmhedberg/matchit'

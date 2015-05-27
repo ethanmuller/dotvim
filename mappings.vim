@@ -39,40 +39,6 @@ nmap <leader>v :source ~/.vimrc<CR>
 " Quick redraw
 nmap <leader>r :redraw!<CR>
 
-" Browse argument list easily
-nmap ]a :next<CR>
-nmap [a :prev<CR>
-nmap ]A :last<CR>
-nmap [A :first<CR>
-
-" Browse buffer list easily
-nmap ]b :bnext<CR>
-nmap [b :bprev<CR>
-nmap ]B :blast<CR>
-nmap [B :bfirst<CR>
-
-" Browse quickfix list easily
-nmap ]c :cnext<CR>
-nmap [c :cprev<CR>
-nmap ]C :clast<CR>
-nmap [C :cfirst<CR>
-
-" Browse location list easily
-nmap ]l :lnext<CR>
-nmap [l :lprev<CR>
-nmap ]L :llast<CR>
-nmap [L :lfirst<CR>
-
-" also with "e" as a mnemonic for error
-nmap ]e :lnext<CR>
-nmap [e :lprev<CR>
-nmap ]E :llast<CR>
-nmap [E :lfirst<CR>
-
-" Create newlines without entering insert mode
-nnoremap go o<Esc>k
-nnoremap gO O<Esc>j
-
 " Open current file in default app
 nmap <leader>o :!open "%"<CR>
 
