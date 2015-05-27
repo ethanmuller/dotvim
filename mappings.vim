@@ -24,13 +24,17 @@ nmap <leader>ft :set filetype=
 nmap <leader>l :set list!<CR>
 
 " Edit vimrc
-nmap <leader>Ev :e ~/.vimrc<CR>
-nmap <leader>Ez :e ~/.zshrc<CR>
-nmap <leader>Ea :e ~/dotfiles/aliases.sh<CR>
+nmap <leader>ev :e ~/.vimrc<CR>
+nmap <leader>em :e ~/.vim/mappings.vim<CR>
+nmap <leader>ep :e ~/.vim/plugins.vim<CR>
 
-" Source vimrc
-nmap <leader>ve :e $MYVIMRC<CR>
-nmap <leader>vs :so $MYVIMRC<CR>
+" Edit zshrc
+nmap <leader>ez :e ~/.zshrc<CR>
+
+" Edit aliases
+nmap <leader>ea :e ~/github/dotfiles/shell/generic/aliases.sh<CR>
+
+nmap <leader>v :source ~/.vimrc<CR>
 
 " Quick redraw
 nmap <leader>r :redraw!<CR>
@@ -91,6 +95,12 @@ inoremap kj <Esc>
 iabbr cl console.log
 iabbr iunno ¯\_(ツ)_/¯
 
+" Filename to pasteboard
+inoremap @fn <c-r>=expand("%:t")<cr>
+
+" Filepath to pasteboard
+inoremap @fp <c-r>=expand("%:p")<cr>
+
 " Insert date
 iabbr ddate <C-R>=strftime("%Y-%m-%d")<CR>
 
@@ -102,3 +112,6 @@ cabbr <expr> %% expand('%:p:h')
 " Nice and shell-y command mode
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+
+" When working with processing...
+nmap <leader>d :w<cr>:make<cr><cr>

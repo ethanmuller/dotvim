@@ -12,6 +12,8 @@ let g:gist_clip_command = 'pbcopy'
 
 "--- SYNTASTIC ---
 let g:syntastic_always_populate_loc_list=1
+let g:syntastic_scss_checkers = ["sass"]
+let g:syntastic_scss_sass_exec = '~/.rvm/gems/ruby-2.0.0-p576/bin/sass'
 
 "--- THE SILVER SEARCHER ---
 if executable('ag')
@@ -41,7 +43,6 @@ let NERDTreeShowLineNumbers=1
 function! s:goyo_enter()
   set wrap
   set linebreak
-  set relativenumber
   nmap j gj
   nmap k gk
   set scrolloff=999
@@ -74,7 +75,10 @@ let g:switch_custom_definitions =
   \   ['white', 'gray', 'black'],
   \   ['sm', 'md', 'lg'],
   \   ['primary', 'secondary'],
-  \   ['gap', 'old-navy', 'banana-republic', 'piperlime', 'athleta']
+  \   ['block', 'none'],
+  \   ['disable', 'enable'],
+  \   ['horizontal', 'vertical'],
+  \   ['margin', 'padding']
   \ ]
 nnoremap <leader>t :Switch<CR>
 
@@ -84,7 +88,7 @@ nmap <Leader>gw :Gwrite<CR>
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gp :Git push<CR>
 nmap <Leader>gu :Git pull<CR>
-nmap <Leader>gd :Gdiff<CR>
+nmap <Leader>gd :Gvdiff<CR>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gL :Git log<cr>
 nmap <leader>gb :Gblame<cr>
@@ -93,13 +97,139 @@ nmap <leader>gb :Gblame<cr>
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 "--- TEXTOBJ-USER ---
-call textobj#user#plugin('datetime', {
-\   'date': {
-\     'pattern': '\<\d\d\d\d-\d\d-\d\d\>',
-\     'select': ['ad', 'id'],
+call textobj#user#plugin('php', {
+\   'cssblock': {
+\     'select-i-function': 'CssBlockI',
+\     'select-i': 'ir',
+\     'select-a-function': 'CssBlockA',
+\     'select-a': 'ar',
 \   },
-\   'time': {
-\     'pattern': '\<\d\d:\d\d:\d\d\>',
-\     'select': ['at', 'it'],
+\   'cssval': {
+\     'select-i-function': 'CssVal',
+\     'select-i': 'iv',
+\     'select-a-function': 'CssVal',
+\     'select-a': 'av',
+\   },
+\   'cssprop': {
+\     'select-i-function': 'CssProp',
+\     'select-i': 'iP',
+\     'select-a-function': 'CssProp',
+\     'select-a': 'aP',
 \   },
 \ })
+
+function! CssVal()
+  normal! ^
+  normal! W
+  let head_pos = getpos('.')
+  normal! t;
+  let tail_pos = getpos('.')
+  return ['v', head_pos, tail_pos]
+endfunction
+
+function! CssProp()
+  normal! ^
+  let head_pos = getpos('.')
+  normal! t:
+  let tail_pos = getpos('.')
+  return ['v', head_pos, tail_pos]
+endfunction
+
+function! CssBlockI()
+  normal! [{
+  normal! ^
+  let head_pos = getpos('.')
+  normal! f{
+  normal! %
+  let tail_pos = getpos('.')
+  return ['V', head_pos, tail_pos]
+endfunction
+
+function! CssBlockA()
+
+  normal! ]}
+  if IsLineBlank(line('.') + 1)
+    let tail_line =  GetFollowingWhitespace(line('.') + 1)
+    let space_after = 1
+  else
+    let tail_line =  line('.')
+    let space_after = 0
+  endif
+
+  normal! [{
+  if !space_after && IsLineBlank(line('.') - 1)
+    let head_line =  GetPrecedingWhitespace(line('.') - 1)
+  else
+    let head_line =  line('.')
+  endif
+
+  " Ew, why do I have to do this?
+  let head_pos = [0, head_line, 0, 0]
+  let tail_pos = [0, tail_line, 0, 0]
+
+  return ['V', head_pos, tail_pos]
+endfunction
+
+function! IsLineBlank(linenum)
+  let line = getline(a:linenum)
+  return line =~ '^s*$'
+endfunction
+
+function! GetFollowingWhitespace(line)
+  " Given a line number,
+  " return line number of last consecutive blank line
+  let line = a:line
+
+  if !IsLineBlank(line)
+    return line
+  endif
+
+  while IsLineBlank(line + 1)
+    let line += 1
+  endwhile
+
+  return line
+endfunction
+
+function! GetPrecedingWhitespace(line)
+  " Given a line number,
+  " return line number of first consecutive blank line
+  let line = a:line
+
+  if !IsLineBlank(line)
+    return line
+  endif
+
+  while IsLineBlank(line - 1)
+    let line -= 1
+  endwhile
+
+  return line
+endfunction
+
+"--- STARTIFY ---
+let g:startify_list_order = ['files']
+
+"--- VIM-PROCESSING ---
+au BufNewFile,BufRead *.pde set filetype=processing
+
+"--- AIRLINE ---
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+set laststatus=2
+
+"--- BUFFERLINE ---
+let g:bufferline_echo = 0
+
+"--- BUFONLY ---
+nmap <leader>a :BufOnly<cr>
+
+"--- RAINBOW_PARENTHESES ---
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+"--- fireplace ---
+"nmap <return> vip:Eval<cr>
+nmap \ vip:Eval<cr>

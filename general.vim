@@ -9,21 +9,21 @@ set history=1000
 " Show incomplete cmds down the bottom
 set showcmd
 
-" Reload files changed outside vim
-set autoread
-
 " Include some nice characters in words
-set iskeyword+=-,$
+"set iskeyword+=-,$
 
 " Enable mouse
 set mouse=a
 
 " Nice colors
-set background=dark
+set background=light
 color solarized
 
 " Don't fold by default
 set nofoldenable
+
+" Automatically reload changed files
+set autoread
 
 " --- SEARCH SETTINGS ---
 

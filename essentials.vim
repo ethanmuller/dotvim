@@ -1,4 +1,3 @@
-
 " Turn on line  numbers
 set number
 
