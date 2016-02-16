@@ -10,20 +10,44 @@ set history=1000
 set showcmd
 
 " Include some nice characters in words
-"set iskeyword+=-,$
+set iskeyword+=-,$
 
 " Enable mouse
 set mouse=a
 
 " Nice colors
+set term=xterm-256color
+set t_Co=256
+let base16colorspace=256        " Access colors present in 256 colorspace
 set background=light
-color solarized
+color base16-default
+
+" slightly highlight current line
+set cursorline
 
 " Don't fold by default
 set nofoldenable
 
 " Automatically reload changed files
 set autoread
+
+" always show status bar
+set laststatus=2
+
+" Nice, simple status line
+" [file path]               [current line] / [total lines]
+set statusline=%h\        " [Help] flag
+set statusline+=%f\       " Path to the file
+set statusline+=%m        " Modified flag
+set statusline+=%r        " Readonly flag
+set statusline+=%=        " Switch to the right side
+set statusline+=%l        " Current line
+set statusline+=\ of\     " Separator
+set statusline+=%L        " Total lines
+
+" subtly highlight lines over 80 characters
+highlight OverLength ctermbg=10 ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
 " --- SEARCH SETTINGS ---
 
@@ -71,7 +95,7 @@ set softtabstop=2
 set nowrap
 
 " No automatic comments on new lines
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " --- COMPLETION ---
 
@@ -104,7 +128,19 @@ vnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 vnoremap <C-y> 3<C-y>
 
-" --- Fixes ---
+" --- FOLDING ---
+
+" Fold based on indent
+set foldmethod=indent
+
+" Deepest fold is 10 levels
+set foldnestmax=10
+
+" Don't fold by default
+set nofoldenable
+
+
+" --- HACKY FIXES ---
 
 " Remove delay while escaping
 set ttimeoutlen=0

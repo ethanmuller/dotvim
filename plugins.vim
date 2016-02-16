@@ -15,23 +15,26 @@ Plug 'scrooloose/syntastic'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'AndrewRadev/switch.vim'
-Plug 'esneider/YUNOcommit.vim'
 Plug 'rking/ag.vim'
 Plug 'schickling/vim-bufonly'
-Plug 'kien/rainbow_parentheses.vim'
+" Plug 'kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-unimpaired'
+Plug 'godlygeek/tabular'
+Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-projectionist'
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmhedberg/matchit'
-Plug 'bling/vim-airline'
 
 " Colors
 Plug 'junegunn/seoul256.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-scripts/pyte'
+Plug 'NLKNguyen/papercolor-theme'
 
 " Syntax
+Plug 'jelera/vim-javascript-syntax'
 Plug 'othree/html5.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'vim-ruby/vim-ruby'
@@ -40,6 +43,9 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'crazymaster/vim-processing'
 Plug 'elzr/vim-json'
 " Plug 'jooize/vim-colemak'
+
+" Arduino stuff
+Plug 'jplaut/vim-arduino-ino'
 
 " Clojure/Overtone stuff
 Plug 'vim-scripts/VimClojure'

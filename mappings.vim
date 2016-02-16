@@ -8,6 +8,8 @@ nmap <c-k> <c-w>k
 nmap <c-h> <c-w>h
 nmap <c-l> <c-w>l
 
+nmap <leader>w :w<cr>
+
 " Switch to last-used file
 nnoremap <leader><leader> <C-^>
 
@@ -23,18 +25,17 @@ nmap <leader>ft :set filetype=
 " Toggle visible characters
 nmap <leader>l :set list!<CR>
 
-" Edit vimrc
-nmap <leader>ev :e ~/.vimrc<CR>
-nmap <leader>em :e ~/.vim/mappings.vim<CR>
-nmap <leader>ep :e ~/.vim/plugins.vim<CR>
+" Landmarks
+nmap <leader>vr :e ~/.vimrc<CR>
+nmap <leader>vm :e ~/.vim/mappings.vim<CR>
+nmap <leader>vp :e ~/.vim/plugins.vim<CR>
+nmap <leader>vs :source ~/.vimrc<CR>
 
 " Edit zshrc
 nmap <leader>ez :e ~/.zshrc<CR>
 
 " Edit aliases
 nmap <leader>ea :e ~/github/dotfiles/shell/generic/aliases.sh<CR>
-
-nmap <leader>v :source ~/.vimrc<CR>
 
 " Quick redraw
 nmap <leader>r :redraw!<CR>
@@ -81,3 +82,21 @@ cnoremap <C-e> <End>
 
 " When working with processing...
 nmap <leader>d :w<cr>:make<cr><cr>
+
+" easily get filename
+" ... without directories
+nmap <leader>fn :let @+=expand('%:t')<cr>
+" ... with directories
+nmap <leader>fp :let @+=@%<cr>
+
+" Find overused words
+" nmap <leader>b :call search('\v(however|obviously|basically|simply|of course|clearly|just|everyone knows|<so>|easy)')<cr>
+
+" Compile & run with F4
+autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+
+" If I'm deleting to the next unclosed }, I probably don't want to clobber
+" indentation. For example, a nested closing CSS bracket would become the
+" first character on its line. It's useful to auto-indent after deleting to
+" the next unclosed }.
+nmap d]} d]}==

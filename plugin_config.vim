@@ -1,5 +1,7 @@
 "--- CTRLP ---
 let g:ctrlp_open_multiple_files = 'i'
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_reuse_window  = 'startify\|netrw\|NERD_tree'
 nmap <leader>m :CtrlPMRUFiles<CR>
 
 "--- GIST.VIM ---
@@ -11,7 +13,7 @@ let g:gist_get_multiplefile = 1
 let g:gist_clip_command = 'pbcopy'
 
 "--- SYNTASTIC ---
-let g:syntastic_always_populate_loc_list=1
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_scss_checkers = ["sass"]
 let g:syntastic_scss_sass_exec = '~/.rvm/gems/ruby-2.0.0-p576/bin/sass'
 
@@ -57,7 +59,7 @@ autocmd! User GoyoLeave
 autocmd  User GoyoEnter nested call <SID>goyo_enter()
 autocmd  User GoyoLeave nested call <SID>goyo_leave()
 
-nnoremap <leader>w :Goyo<CR>
+nnoremap <leader>W :Goyo<CR>
 let g:goyo_margin_top = 0
 let g:goyo_margin_bottom = 0
 
@@ -78,6 +80,7 @@ let g:switch_custom_definitions =
   \   ['block', 'none'],
   \   ['disable', 'enable'],
   \   ['horizontal', 'vertical'],
+  \   ['first', 'last'],
   \   ['margin', 'padding']
   \ ]
 nnoremap <leader>t :Switch<CR>
@@ -208,27 +211,16 @@ function! GetPrecedingWhitespace(line)
 endfunction
 
 "--- STARTIFY ---
-let g:startify_list_order = ['files']
+let g:startify_list_order = []
+
+let g:startify_custom_header =
+  \ map(split(system('fortune fortunes | cowsay'), '\n'), '"   ". v:val') + ['','']
 
 "--- VIM-PROCESSING ---
 au BufNewFile,BufRead *.pde set filetype=processing
 
-"--- AIRLINE ---
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-set laststatus=2
-
 "--- BUFFERLINE ---
 let g:bufferline_echo = 0
-
-"--- BUFONLY ---
-nmap <leader>a :BufOnly<cr>
-
-"--- RAINBOW_PARENTHESES ---
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 
 "--- fireplace ---
 "nmap <return> vip:Eval<cr>
