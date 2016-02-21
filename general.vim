@@ -15,12 +15,8 @@ set iskeyword+=-,$
 " Enable mouse
 set mouse=a
 
-" Nice colors
-set term=xterm-256color
-set t_Co=256
-let base16colorspace=256        " Access colors present in 256 colorspace
-set background=light
-color base16-default
+" Show trailing whitespace 
+set list listchars=tab:\ \ ,trail:·
 
 " slightly highlight current line
 set cursorline
@@ -41,13 +37,30 @@ set statusline+=%f\       " Path to the file
 set statusline+=%m        " Modified flag
 set statusline+=%r        " Readonly flag
 set statusline+=%=        " Switch to the right side
+set statusline+=%v        " Virtual column number
+set statusline+=\ \|\     " Separator
 set statusline+=%l        " Current line
-set statusline+=\ of\     " Separator
+set statusline+=\ \/\     " Separator
 set statusline+=%L        " Total lines
 
-" subtly highlight lines over 80 characters
-highlight OverLength ctermbg=10 ctermfg=white guibg=#592929
+" --- COLORS ---
+
+" Nice colors
+let base16colorspace=256        " Access colors present in 256 colorspace
+set background=light
+color base16-default
+
+" Subtly highlight lines over 80 characters
+highlight OverLength ctermbg=07
 match OverLength /\%81v.\+/
+
+" Highlight butts
+highlight Butts ctermbg=09 ctermfg=07
+match Butts /[Bb]utts/
+
+" Italic comments
+" https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/
+highlight Comment cterm=italic
 
 " --- SEARCH SETTINGS ---
 

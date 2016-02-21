@@ -1,1 +1,2 @@
-set guifont=Monaco:h18
+set guifont=Ubuntu\ Mono:h18
+set linespace=7

@@ -45,6 +45,7 @@ let NERDTreeShowLineNumbers=1
 function! s:goyo_enter()
   set wrap
   set linebreak
+  set nolist
   nmap j gj
   nmap k gk
   set scrolloff=999
@@ -52,6 +53,7 @@ endfunction
 
 function! s:goyo_leave()
   set scrolloff=8
+  set list
 endfunction
 
 autocmd! User GoyoEnter
@@ -212,9 +214,13 @@ endfunction
 
 "--- STARTIFY ---
 let g:startify_list_order = []
+let g:startify_bookmarks = ['~/.vimrc']
 
-let g:startify_custom_header =
-  \ map(split(system('fortune fortunes | cowsay'), '\n'), '"   ". v:val') + ['','']
+" npm install -g encouraging-cow
+if executable('encouraging-cow')
+  let g:startify_custom_header =
+    \ map(split(system('encouraging-cow'), '\n'), '"   ". v:val') + ['','']
+endif
 
 "--- VIM-PROCESSING ---
 au BufNewFile,BufRead *.pde set filetype=processing
