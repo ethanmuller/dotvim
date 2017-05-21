@@ -25,11 +25,14 @@ nmap <leader>ft :set filetype=
 " Toggle visible characters
 nmap <leader>l :set list!<CR>
 
+" Easily toggle folds
+nmap <leader>z za
+
 " Landmarks
-nmap <leader>vr :e ~/.vimrc<CR>
+nmap <leader>vr :e ~/.config/nvim/init.vim<CR>
 nmap <leader>vm :e ~/.vim/mappings.vim<CR>
 nmap <leader>vp :e ~/.vim/plugins.vim<CR>
-nmap <leader>vs :source ~/.vimrc<CR>
+nmap <leader>vs :source ~/.config/nvim/init.vim<CR>
 
 " Edit zshrc
 nmap <leader>ez :e ~/.zshrc<CR>
@@ -58,6 +61,8 @@ nmap <leader>s :set spell!<CR>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
+iabbr <expr> dts strftime("%F")
+
 " I do a lot of console.logs
 iabbr cl console.log
 iabbr iunno ¯\_(ツ)_/¯
@@ -81,7 +86,7 @@ cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
 " When working with processing...
-nmap <leader>d :w<cr>:make<cr><cr>
+" nmap <leader>d :w<cr>:make<cr><cr>
 
 " easily get filename
 " ... without directories

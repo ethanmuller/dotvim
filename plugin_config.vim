@@ -2,6 +2,7 @@
 let g:ctrlp_open_multiple_files = 'i'
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_reuse_window  = 'startify\|netrw\|NERD_tree'
+nmap <leader>p :CtrlPMRUFiles<CR>
 nmap <leader>m :CtrlPMRUFiles<CR>
 
 "--- GIST.VIM ---
@@ -213,8 +214,8 @@ function! GetPrecedingWhitespace(line)
 endfunction
 
 "--- STARTIFY ---
-let g:startify_list_order = []
-let g:startify_bookmarks = ['~/.vimrc']
+let g:startify_list_order = ['bookmarks']
+let g:startify_bookmarks = ['~/Dropbox\ (Personal)/todo.txt', '~/Dropbox\ (Personal)/todo_work.txt', '~/Dropbox\ (Personal)/todo_home.txt', '~/.vimrc']
 
 " npm install -g encouraging-cow
 if executable('encouraging-cow')
@@ -231,3 +232,11 @@ let g:bufferline_echo = 0
 "--- fireplace ---
 "nmap <return> vip:Eval<cr>
 nmap \ vip:Eval<cr>
+
+"--- lua-ftplugin ---
+au BufNewFile,BufRead *.p8 set ft=lua | setlocal sts=1 | setlocal sw=1 | let b:lua_check_syntax = 0
+
+"--- vim-jsx ---
+" enable in all files, not just *.jsx files
+let g:jsx_ext_required = 0
+

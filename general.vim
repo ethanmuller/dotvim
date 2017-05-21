@@ -9,6 +9,9 @@ set history=1000
 " Show incomplete cmds down the bottom
 set showcmd
 
+" Allow deleting after entering insert mode
+set backspace=indent,eol,start
+
 " Include some nice characters in words
 set iskeyword+=-,$
 
@@ -20,12 +23,6 @@ set list listchars=tab:\ \ ,trail:·
 
 " slightly highlight current line
 set cursorline
-
-" Don't fold by default
-set nofoldenable
-
-" Automatically reload changed files
-set autoread
 
 " always show status bar
 set laststatus=2
@@ -47,8 +44,8 @@ set statusline+=%L        " Total lines
 
 " Nice colors
 let base16colorspace=256        " Access colors present in 256 colorspace
-set background=light
-color base16-default
+set background=dark
+color base16-ocean
 
 " Subtly highlight lines over 80 characters
 highlight OverLength ctermbg=07
@@ -57,6 +54,16 @@ match OverLength /\%81v.\+/
 " Highlight butts
 highlight Butts ctermbg=09 ctermfg=07
 match Butts /[Bb]utts/
+
+" Highlight git markers
+" highlight GitDiffStart ctermbg=09 ctermfg=07
+" match GitDiffStart /<<<<<<</
+
+" highlight GitDiffEnd ctermbg=09 ctermfg=07
+" match GitDiffEnd   />>>>>>>/
+
+
+
 
 " Italic comments
 " https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/
@@ -107,8 +114,16 @@ set softtabstop=2
 " Don't wrap lines
 set nowrap
 
+" Prevent extra spaces from appearing after punctuation when joining lines
+set nojoinspaces
+
 " No automatic comments on new lines
 " autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" in makefiles, don't expand tabs to spaces, since actual tab characters are
+" needed, and have indentation at 8 chars to be sure that all indents are tabs
+" (despite the mappings later):
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 " --- COMPLETION ---
 
@@ -144,13 +159,15 @@ vnoremap <C-y> 3<C-y>
 " --- FOLDING ---
 
 " Fold based on indent
-set foldmethod=indent
+" set foldmethod=indent
 
 " Deepest fold is 10 levels
-set foldnestmax=10
+" set foldnestmax=10
 
 " Don't fold by default
-set nofoldenable
+" set nofoldenable
+
+" pico8 folding
 
 
 " --- HACKY FIXES ---
