@@ -215,7 +215,7 @@ endfunction
 
 "--- STARTIFY ---
 let g:startify_list_order = ['bookmarks']
-let g:startify_bookmarks = ['~/Dropbox\ (Personal)/todo.txt', '~/Dropbox\ (Personal)/todo_work.txt', '~/Dropbox\ (Personal)/todo_home.txt', '~/.vimrc']
+let g:startify_bookmarks = ['~/.vimrc']
 
 " npm install -g encouraging-cow
 if executable('encouraging-cow')
