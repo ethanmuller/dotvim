@@ -2,7 +2,7 @@
 let g:ctrlp_open_multiple_files = 'i'
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_reuse_window  = 'startify\|netrw\|NERD_tree'
-nmap <leader>p :CtrlPMRUFiles<CR>
+nmap <leader>p :CtrlP<CR>
 nmap <leader>m :CtrlPMRUFiles<CR>
 
 "--- GIST.VIM ---
@@ -101,28 +101,6 @@ nmap <leader>gb :Gblame<cr>
 
 "--- EMMET ---
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-
-"--- TEXTOBJ-USER ---
-call textobj#user#plugin('php', {
-\   'cssblock': {
-\     'select-i-function': 'CssBlockI',
-\     'select-i': 'ir',
-\     'select-a-function': 'CssBlockA',
-\     'select-a': 'ar',
-\   },
-\   'cssval': {
-\     'select-i-function': 'CssVal',
-\     'select-i': 'iv',
-\     'select-a-function': 'CssVal',
-\     'select-a': 'av',
-\   },
-\   'cssprop': {
-\     'select-i-function': 'CssProp',
-\     'select-i': 'iP',
-\     'select-a-function': 'CssProp',
-\     'select-a': 'aP',
-\   },
-\ })
 
 function! CssVal()
   normal! ^
