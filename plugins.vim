@@ -63,5 +63,7 @@ Plug 'vim-scripts/VimClojure'
 "Plug 'guns/vim-clojure-static'
 "Plug 'tpope/vim-fireplace'
 "Plug 'tpope/vim-classpath'
+Plug 'posva/vim-vue'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 call plug#end()

@@ -46,6 +46,8 @@ set statusline+=%L        " Total lines
 "let base16colorspace=256        " Access colors present in 256 colorspace
 "set background=dark
 "color blue
+let base16colorspace=256        " Access colors present in 256 colorspace
+set background=dark
 
 " Subtly highlight lines over 80 characters
 highlight OverLength ctermbg=07
