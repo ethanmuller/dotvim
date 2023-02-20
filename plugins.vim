@@ -66,4 +66,5 @@ Plug 'vim-scripts/VimClojure'
 Plug 'posva/vim-vue'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
+Plug 'elkowar/yuck.vim'
 call plug#end()

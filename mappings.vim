@@ -61,7 +61,9 @@ nmap <leader>s :set spell!<CR>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-iabbr <expr> dts strftime("%F")
+iabbr <expr> dts strftime("%a %Y-%m-%d")
+iabbr <expr> ts strftime("%H:%M")
+iabbr <expr> dcts strftime("%H")
 
 " I do a lot of console.logs
 iabbr cl console.log
